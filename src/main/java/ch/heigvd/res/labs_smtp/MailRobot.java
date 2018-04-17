@@ -6,6 +6,7 @@ import ch.heigvd.res.labs_smtp.model.prank.PrankGenerator;
 import ch.heigvd.res.labs_smtp.smtp.ISmtpClient;
 import ch.heigvd.res.labs_smtp.smtp.SmtpClient;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.logging.Level;
@@ -15,7 +16,7 @@ public class MailRobot {
     private static final Logger LOG = Logger.getLogger(Config.class.getName());
 
     public static void main(String[] args) {
-        Config config = new Config("/config.txt"); //"../resources/"
+        Config config = new Config(  File.pathSeparatorChar + "config.txt");
         PrankGenerator prankGenerator = null;
 
         try {
