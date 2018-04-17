@@ -15,7 +15,6 @@ public class Config {
     private int nbGroups;
     private String addressesFile;
     private String messagesFile;
-    private String folder;
 
     private final String SUBJECT_TAG = "Subject:";
     private final String MESSAGE_TAG = "Message:";
@@ -25,10 +24,9 @@ public class Config {
     private ArrayList<Message> messages = new ArrayList<Message>();
 
     public Config(String file) {
-        this.folder = folder;
         BufferedReader bufferedReader = null;
 
-        //lecture du fichier file dans le dossier folder
+        //read the config file
         try {
             bufferedReader = new BufferedReader(new InputStreamReader(Config.class.getResourceAsStream(file), "UTF8"));
             server = bufferedReader.readLine();
