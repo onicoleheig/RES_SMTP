@@ -39,8 +39,10 @@ public class SmtpClient implements ISmtpClient {
         System.out.println(bufferedReader.readLine()); //read the welcome message and display it
 
         //EHLO command
-        printWriter.print(EHLO_CMD + config.getServer() + LINE_RETURN);
+        System.out.println("print : ");
+        printWriter.print(EHLO_CMD + "local" + LINE_RETURN);
         String line = bufferedReader.readLine();
+        System.out.println("line : " + line);
 
         //read all server responses following EHLO command
         while (line.startsWith("250-")) {
