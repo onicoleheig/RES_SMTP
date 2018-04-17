@@ -2,22 +2,21 @@ package ch.heigvd.res.labs_smtp.model.prank;
 
 import ch.heigvd.res.labs_smtp.model.mail.Group;
 import ch.heigvd.res.labs_smtp.model.mail.Person;
-import com.sun.tools.corba.se.idl.InvalidArgument;
 import ch.heigvd.res.labs_smtp.config.Config;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.logging.Logger;
 
 public class PrankGenerator {
-
     private Config config;
     private ArrayList<Prank> pranks;
 
-    public PrankGenerator(Config config, int nbGroups) throws InvalidArgument {
+    public PrankGenerator(Config config, int nbGroups) throws Exception {
         this.config = config;
 
         if(nbGroups < 1 || config.getNbGroups() < 1) {
-            throw new InvalidArgument("nbGroups can't be < 1");
+            throw new Exception("nbGroups can't be < 1");
         }
         pranks = new ArrayList<Prank>();
 
