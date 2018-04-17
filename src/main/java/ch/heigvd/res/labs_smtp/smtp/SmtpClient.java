@@ -36,7 +36,7 @@ public class SmtpClient implements ISmtpClient {
         socket = new Socket(config.getServer(), config.getPort());
         printWriter = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "UTF-8"), true );
         bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
-        bufferedReader.readLine(); //read the welcome message
+        System.out.println(bufferedReader.readLine()); //read the welcome message and display it
 
         //EHLO command
         printWriter.print(EHLO_CMD + config.getServer() + LINE_RETURN);
@@ -45,23 +45,24 @@ public class SmtpClient implements ISmtpClient {
         //read all server responses following EHLO command
         while (line.startsWith("250-")) {
             line = bufferedReader.readLine();
+            System.out.println(line);
         }
 
         //FROM command
         printWriter.print(FROM_CMD + "<" + prank.getSender() + ">" + LINE_RETURN);
-        bufferedReader.readLine();
+        System.out.println(bufferedReader.readLine());
 
         //RCPT command
         for (Person person : prank.getVictimeRecipients()) {
             printWriter.print(RCPT_CMD + "<" + person.getAddress() + ">" + LINE_RETURN);
-            bufferedReader.readLine();
+            System.out.println(bufferedReader.readLine());
         }
 
         //if the prank include cc
         if (prank.getCc() != null) {
             for (Person person : prank.getCc()) {
                 printWriter.print(RCPT_CMD + "<" + person.getAddress() + ">" + LINE_RETURN);
-                bufferedReader.readLine();
+                System.out.println(bufferedReader.readLine());
             }
         }
 
@@ -69,13 +70,14 @@ public class SmtpClient implements ISmtpClient {
         if (prank.getBcc() != null) {
             for (Person person : prank.getBcc()) {
                 printWriter.print(RCPT_CMD + "<" + person.getAddress() + ">" + LINE_RETURN);
-                bufferedReader.readLine();
+                System.out.println(bufferedReader.readLine());
             }
         }
 
         //starting the DATA command
         printWriter.print(DATA_CMD);
         line = bufferedReader.readLine();
+        System.out.println(line);
 
         //from information
         printWriter.print(FROM_DATA + prank.getSender().getAddress() + LINE_RETURN);
@@ -122,6 +124,7 @@ public class SmtpClient implements ISmtpClient {
         printWriter.print(prank.getBody() + LINE_RETURN);
         printWriter.print(END_DATA);
         line = bufferedReader.readLine();
+        System.out.println(line);
         printWriter.print(QUIT_CMD + LINE_RETURN);
         printWriter.close();
         bufferedReader.close();
