@@ -16,7 +16,7 @@ public class MailRobot {
     private static final Logger LOG = Logger.getLogger(Config.class.getName());
 
     public static void main(String[] args) {
-        Config config = new Config(  File.pathSeparatorChar + "config.txt");
+        Config config = new Config("/config.txt");
         PrankGenerator prankGenerator = null;
 
         try {

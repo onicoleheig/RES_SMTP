@@ -32,8 +32,8 @@ public class Config {
             server = bufferedReader.readLine();
             port = Integer.parseInt(bufferedReader.readLine());
             nbGroups = Integer.parseInt(bufferedReader.readLine());
-            addressesFile = File.pathSeparatorChar + bufferedReader.readLine();
-            messagesFile = File.pathSeparatorChar + bufferedReader.readLine();
+            addressesFile = "/" + bufferedReader.readLine();
+            messagesFile = "/" + bufferedReader.readLine();
             bufferedReader.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
