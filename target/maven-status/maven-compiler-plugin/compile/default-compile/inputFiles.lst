@@ -1,0 +1,9 @@
+/Users/lionelnanchen/Documents/HEIG-VD/Semestre 4/RES/Laboratoire/LaboSMTP/Teaching-HEIGVD-RES-2018-Labo-SMTP-master/RES_LaboSMTP/src/main/java/ch/heigvd/res/labs_smtp/smtp/ISmtpClient.java
+/Users/lionelnanchen/Documents/HEIG-VD/Semestre 4/RES/Laboratoire/LaboSMTP/Teaching-HEIGVD-RES-2018-Labo-SMTP-master/RES_LaboSMTP/src/main/java/ch/heigvd/res/labs_smtp/model/mail/Message.java
+/Users/lionelnanchen/Documents/HEIG-VD/Semestre 4/RES/Laboratoire/LaboSMTP/Teaching-HEIGVD-RES-2018-Labo-SMTP-master/RES_LaboSMTP/src/main/java/ch/heigvd/res/labs_smtp/MailRobot.java
+/Users/lionelnanchen/Documents/HEIG-VD/Semestre 4/RES/Laboratoire/LaboSMTP/Teaching-HEIGVD-RES-2018-Labo-SMTP-master/RES_LaboSMTP/src/main/java/ch/heigvd/res/labs_smtp/config/Config.java
+/Users/lionelnanchen/Documents/HEIG-VD/Semestre 4/RES/Laboratoire/LaboSMTP/Teaching-HEIGVD-RES-2018-Labo-SMTP-master/RES_LaboSMTP/src/main/java/ch/heigvd/res/labs_smtp/model/mail/Group.java
+/Users/lionelnanchen/Documents/HEIG-VD/Semestre 4/RES/Laboratoire/LaboSMTP/Teaching-HEIGVD-RES-2018-Labo-SMTP-master/RES_LaboSMTP/src/main/java/ch/heigvd/res/labs_smtp/model/mail/Person.java
+/Users/lionelnanchen/Documents/HEIG-VD/Semestre 4/RES/Laboratoire/LaboSMTP/Teaching-HEIGVD-RES-2018-Labo-SMTP-master/RES_LaboSMTP/src/main/java/ch/heigvd/res/labs_smtp/model/prank/Prank.java
+/Users/lionelnanchen/Documents/HEIG-VD/Semestre 4/RES/Laboratoire/LaboSMTP/Teaching-HEIGVD-RES-2018-Labo-SMTP-master/RES_LaboSMTP/src/main/java/ch/heigvd/res/labs_smtp/model/prank/PrankGenerator.java
+/Users/lionelnanchen/Documents/HEIG-VD/Semestre 4/RES/Laboratoire/LaboSMTP/Teaching-HEIGVD-RES-2018-Labo-SMTP-master/RES_LaboSMTP/src/main/java/ch/heigvd/res/labs_smtp/smtp/SmtpClient.java
