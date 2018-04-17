@@ -24,18 +24,18 @@ public class Config {
     private ArrayList<Person> persons = new ArrayList<Person>();
     private ArrayList<Message> messages = new ArrayList<Message>();
 
-    public Config(String folder, String file) {
+    public Config(String file) {
         this.folder = folder;
         BufferedReader bufferedReader = null;
 
         //lecture du fichier file dans le dossier folder
         try {
-            bufferedReader = new BufferedReader(new FileReader(folder + file));
+            bufferedReader = new BufferedReader(new InputStreamReader(Config.class.getResourceAsStream(file), "UTF8"));
             server = bufferedReader.readLine();
             port = Integer.parseInt(bufferedReader.readLine());
             nbGroups = Integer.parseInt(bufferedReader.readLine());
-            addressesFile = bufferedReader.readLine();
-            messagesFile = bufferedReader.readLine();
+            addressesFile = "/" + bufferedReader.readLine();
+            messagesFile = "/" + bufferedReader.readLine();
             bufferedReader.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -45,7 +45,7 @@ public class Config {
 
         String address = "";
         try {
-            bufferedReader = new BufferedReader(new FileReader(folder + addressesFile));
+            bufferedReader = new BufferedReader(new InputStreamReader(Config.class.getResourceAsStream(addressesFile), "UTF8"));
             while ((address = bufferedReader.readLine()) != null) {
                 persons.add(new Person(address));
             }
@@ -60,7 +60,7 @@ public class Config {
         String line = "";
         String tmp = "";
         try {
-            bufferedReader = new BufferedReader(new FileReader(folder + messagesFile));
+            bufferedReader = new BufferedReader(new InputStreamReader(Config.class.getResourceAsStream(messagesFile), "UTF8"));
             while ((line = bufferedReader.readLine()) != null) {
                 if (line.startsWith(SUBJECT_TAG)) {
                     subject = bufferedReader.readLine();
