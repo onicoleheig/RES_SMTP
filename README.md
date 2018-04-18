@@ -1,6 +1,20 @@
 # Teaching-HEIGVD-RES-2018-Labo-SMTP
 
-###Nanchen Lionel , Nicole Olivier
+Project done during RES course in HEIG-VD
+
+Authors :
+	Nanchen Lionel
+	Nicole Olivier
+
+# Description
+
+
+
+
+
+# How to use it
+
+Brief description for configurint and running a prank compaign.
 
 ### Config.txt:
 
@@ -38,4 +52,8 @@ Message:
 -.-
 <...>
 ```
+
+
+
+# Implementation
 
