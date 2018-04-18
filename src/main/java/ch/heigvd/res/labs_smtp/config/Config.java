@@ -5,6 +5,7 @@ import ch.heigvd.res.labs_smtp.model.mail.Person;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Config {
@@ -36,9 +37,9 @@ public class Config {
             messagesFile = "/" + bufferedReader.readLine();
             bufferedReader.close();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LOG.log(Level.SEVERE, "FileNotFound : config", e);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.log(Level.SEVERE, "IOException", e);
         }
 
         String address = "";
@@ -48,10 +49,11 @@ public class Config {
                 persons.add(new Person(address));
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LOG.log(Level.SEVERE, "FileNotFound : address", e);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.log(Level.SEVERE, "IOException", e);
         }
+
 
         String subject = "";
         String body = "";
@@ -73,9 +75,9 @@ public class Config {
                 }
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LOG.log(Level.SEVERE, "FileNotFound : messages", e);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.log(Level.SEVERE, "IOException", e);
         }
     }
 

@@ -3,3 +3,9 @@ lionelnanchen@gmail.com
 olivierncl@gmail.com
 lionel.nanchen@heig-vd.ch
 olivier.nicolesoitnicoulaz@heig-vd.ch
+test1@gmail.com
+test2@gmail.com
+test3@gmail.com
+test4@gmail.com
+test5@gmail.com
+test6@gmail.com
