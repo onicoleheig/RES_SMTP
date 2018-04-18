@@ -47,11 +47,13 @@ public class SmtpClient implements ISmtpClient {
         }
 
         //FROM command
-        printWriter.println(FROM_CMD + "<" + prank.getSender() + ">");
+        System.out.println(FROM_CMD + "<" + prank.getSender().getAddress() + ">");
+        printWriter.println(FROM_CMD + "<" + prank.getSender().getAddress() + ">");
         System.out.println(bufferedReader.readLine());
 
         //RCPT command
         for (Person person : prank.getVictimeRecipients()) {
+            System.out.println(RCPT_CMD + "<" + person.getAddress() + ">");
             printWriter.println(RCPT_CMD + "<" + person.getAddress() + ">");
             System.out.println(bufferedReader.readLine());
         }
@@ -115,7 +117,7 @@ public class SmtpClient implements ISmtpClient {
         }
 
         //subject information
-        printWriter.println(SUBJECT_DATA + prank.getSubject());
+        printWriter.println(SUBJECT_DATA + prank.getSubject() + "\n");
 
         //body text
         printWriter.println(prank.getBody());
