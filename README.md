@@ -14,7 +14,7 @@ This GitHub repo put tu use a source code that simulate a SMTP Client to send pr
 
 
 
-#How to set up mock SMTP server (with Docker)
+# How to set up mock SMTP server (with Docker)
 
 To use our prank generator with a mock SMTP server running on Docker, you have to install Docker at first :
 
